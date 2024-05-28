@@ -2,6 +2,15 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.favorite-movie-image{
+  cursor: pointer;
+}
+
+.watch-later-movie-image{
+  cursor: pointer;
 }
 
 .favorite-movie, .watch-later-movie{
@@ -26,8 +35,161 @@
   }
 
   .watch-later-movies{
-    margin-top: 100px;
+    margin-top: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
+
+
+.search-page {
+    padding: 20px;
+  }
+  
+  .search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .search-input, .search-select, .search-button {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 50px;
+    width: 50%;
+}
+  
+  .search-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 220px;
+  }
+  
+   
+  .movie-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .movie-info {
+    padding: 10px;
+  }
+  
+  .movie-title {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .movie-description {
+    font-size: 14px;
+  }
+
+
+  .movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+  }
+  
+  .movie-details__image {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .movie-details__info {
+    text-align: center;
+  }
+  
+  .movie-details__title {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .movie-details__description {
+    margin-bottom: 10px;
+  }
+  
+  .movie-details__rating, .movie-details__release-date {
+    margin-bottom: 10px;
+  }
+  
+  .movie-details__trailer {
+    margin: 20px 0;
+  }
+  
+  .movie-details__cast ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .movie-details__cast li {
+    margin-bottom: 5px;
+  }
+  
+  .movie-details__similar-movies {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .similar-movie {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .similar-movie img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .movie-details__comments {
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .movie-details__comments h3 {
+    margin-bottom: 10px;
+  }
+  
+  .movie-details__comments ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .movie-details__comments li {
+    margin-bottom: 10px;
+  }
+  
+  .movie-details__comments form {
+    margin-top: 10px;
+  }
+  
+  .movie-details__comments textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-details__comments button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .movie-details__comments button:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  .movie__info-data-main{
+    display: flex;
+  }

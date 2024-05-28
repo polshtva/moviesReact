@@ -15,6 +15,7 @@ export default function Home({ favoriteMovies, setFavoriteMovies, watchLaterMovi
   const [selectedCategory, setSelectedCategory] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
 
+
   useEffect(() => {
     const fetchMoviesAndGenres = async () => {
       try {
@@ -60,6 +61,8 @@ export default function Home({ favoriteMovies, setFavoriteMovies, watchLaterMovi
     setSearchQuery(e.target.value);
   };
 
+
+
   const handleToggleFavorite = (movie) => {
     setFavoriteMovies((prevFavorites) => {
       if (prevFavorites.some(fav => fav.id === movie.id)) {
@@ -96,6 +99,7 @@ export default function Home({ favoriteMovies, setFavoriteMovies, watchLaterMovi
     }
     return 0;
   });
+  
 
   return (
     <div>
@@ -115,7 +119,7 @@ export default function Home({ favoriteMovies, setFavoriteMovies, watchLaterMovi
       </div>
       <main className="movies-block">
         {sortedMovies.map(movie => (
-          <ItemsMov key={movie.id} movie={movie} toggleFavorite={handleToggleFavorite} toggleWatchLater={handleToggleWatchLater} />
+          <ItemsMov  onClick={() => handleMovieClick(movie.id)} key={movie.id} movie={movie} toggleFavorite={handleToggleFavorite} toggleWatchLater={handleToggleWatchLater} />
         ))}
       </main>
       </div>

@@ -1,11 +1,13 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './ItemsMov.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function ItemsMov({ movie }) {
   const dispatch = useDispatch();
   const favoriteMovies = useSelector(state => state.favoriteMovies);
   const watchLaterMovies = useSelector(state => state.watchLaterMovies);
+  const navigate = useNavigate();
 
   const isFavClicked = favoriteMovies.some(favMovie => favMovie.id === movie.id);
   const isLaterClicked = watchLaterMovies.some(laterMovie => laterMovie.id === movie.id);
@@ -18,9 +20,13 @@ export default function ItemsMov({ movie }) {
     dispatch({ type: 'TOGGLE_WATCH_LATER', payload: movie });
   };
 
+  const handleMovieClick = (id) => {
+    navigate(`/movie/${id}`);
+  };
+
   return (
-    <div className="movie-card">
-      <img className="movie-image" src={movie.photo} alt={movie.title} />
+    <div className="movie-card" >
+      <img className="movie-image" src={movie.photo} alt={movie.title} onClick={() => handleMovieClick(movie.id)}/>
       <div className="movie-info">
         <h2 className="movie-title">{movie.title}</h2>
         <p className="movie-description">{movie.description}</p>

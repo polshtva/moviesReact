@@ -9,7 +9,7 @@
 .nav__item{
     list-style: none;
     font-size: 20px;
-   
+    text-wrap: nowrap;
 }
 
 .nav__item a{
