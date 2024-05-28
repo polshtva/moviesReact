@@ -1,0 +1,62 @@
+.nav{
+    max-width: 500px;
+}
+.nav__list{
+    display: flex;
+    gap: 3%;
+}
+
+.nav__item{
+    list-style: none;
+    font-size: 20px;
+   
+}
+
+.nav__item a{
+    transition: color, transform 500ms ease;
+}
+
+.nav__item:hover{
+   color: black;
+    transform: scale(1.2);
+}
+
+.header-block{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.4); /* Цвет фона */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для придания глубины */
+    z-index: 1000; /* Уровень z-index для размещения поверх остального содержимого */
+  }
+  
+  .nav {
+    padding: 10px 20px; /* Отступы для навигационного меню */
+  }
+  
+  .nav__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav__item {
+    display: inline-block;
+    margin-right: 20px; /* Отступы между элементами меню */
+  }
+  
+  .nav__item:last-child {
+    margin-right: 0; /* Убираем правый отступ у последнего элемента */
+  }
+  
+  .nav__item a {
+    text-decoration: none;
+    color: #333; /* Цвет ссылок */
+    font-weight: bold;
+  }
+  
+  .nav__item a:hover {
+    color: #007bff; /* Цвет ссылок при наведении */
+  }
+  

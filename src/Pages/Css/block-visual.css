@@ -1,0 +1,33 @@
+.movies__main-block{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.favorite-movie, .watch-later-movie{
+    width: 390px;
+    display: flex;    
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; /* Обрезаем изображение */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    margin-top: 50px;
+    box-shadow: 8px 8px 10px gray;
+    transition: transform 500ms ease;
+    margin-right: 10px;
+}
+
+.favorite-movie:hover, .watch-later-movie:hover{
+    transform: scale(1.1);
+    z-index: 10;
+  }
+
+  .watch-later-movies{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

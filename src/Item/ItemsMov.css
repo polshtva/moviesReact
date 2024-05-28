@@ -1,0 +1,139 @@
+.movie-card {
+    width: 390px;
+    display: flex;    
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; /* Обрезаем изображение */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    margin-top: 50px;
+    box-shadow: 8px 8px 10px gray;
+    transition: transform 500ms ease;
+    position: relative;
+  }
+
+  .movie-card:hover{
+    transform: scale(1.1);
+    z-index: 10;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: 300px; /* Задаем фиксированную высоту изображения */
+    object-fit: cover; /* Заполняем контейнер изображением */
+    border-radius: 8px 0 0 8px;
+  }
+  
+  .movie-info {
+    flex-grow: 1;
+    padding: 20px;
+
+  }
+  
+  .movie-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-description {
+    margin-bottom: 15px;
+    color: #666;
+  }
+  
+  .movie-details p {
+    margin-bottom: 10px;
+  }
+
+
+
+
+  
+  /* Медиа-запросы для адаптивности */
+  
+  @media (max-width: 768px) {
+    .movie-card {
+      max-width: 334px !important;
+      flex-direction: column; /* Переставляем изображение над описанием на мобильных устройствах */
+      border-radius: 8px;
+    }
+  
+    .movie-card img {
+      margin-top: 0px;
+      width: 100%;
+      border-radius: 8px 8px 0 0;
+    }
+  }
+  
+
+  .categories li{
+    display: inline-block;
+    background-color: #f2f2f2;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 500ms ease;
+    font-size: 15px;
+}
+
+.categories li:hover, .active{
+    border-color: rgb(20, 17, 82);
+    transform: scale(1.1);
+    background-color: transparent;
+    color:  rgb(20, 17, 82);
+}
+
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  margin-right: 10px;
+}
+
+.select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.categories__item{
+  text-transform: uppercase;
+}
+
+.movie__choose{
+  display: flex;
+  justify-content: end;
+  gap: 4px;
+}
+
+.movie__icon{
+  max-width: 30px;
+  max-height: 30px;
+  cursor: pointer;
+}
+
+.movie__icon-fav{
+  position: absolute;
+  bottom: 5px;
+  right: 38px;
+}
+
+.movie__icon-later{
+  position: absolute;
+  bottom: 5px;
+  right: 3px;
+}
