@@ -24,6 +24,7 @@
     height: 300px; /* Задаем фиксированную высоту изображения */
     object-fit: cover; /* Заполняем контейнер изображением */
     border-radius: 8px 0 0 8px;
+    cursor: pointer;
   }
   
   .movie-info {

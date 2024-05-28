@@ -1,0 +1,37 @@
+/* Card.css */
+.actors-list, .similar-movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .actor-card, .similar-movie-card {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+
+  .similar-movie-card{
+    width: 300px;
+}
+  .similar-movie-card:hover {
+    transform: translateY(-15px);
+  }
+  
+  .actor-card__image, .similar-movie-card__image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .actor-card__name, .similar-movie-card__title {
+    text-align: center;
+    padding: 10px;
+  }
+  

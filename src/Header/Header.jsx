@@ -5,6 +5,8 @@ import Home from '../Pages/Home';
 import Favorite from '../Pages/Favorite';
 import WatchLater from '../Pages/WatchLater';
 import './Header.css';
+import Search from '../Pages/Search';
+import MovieDetails from '../Pages/MovieDetails ';
 
 export default function Header() {
   const favoriteMovies = useSelector(state => state.favoriteMovies);
@@ -17,13 +19,16 @@ export default function Header() {
           <div className="nav">
             <ul className='nav__list'>
               <li className='nav__item'>
-                <Link to="/">Home</Link>
+                <Link to="/">Моё кино</Link>
               </li>
               <li className='nav__item'>
-                <Link to="/favorite">Favorite</Link>
+                <Link to="/favorite">Избранные</Link>
               </li>
               <li className='nav__item'>
-                <Link to="/later">Watch later</Link>
+                <Link to="/later">Посмотреть позже</Link>
+              </li>
+              <li className='nav__item'>
+                <Link to="/search">Поиск</Link>
               </li>
             </ul>
           </div>
@@ -32,6 +37,8 @@ export default function Header() {
           <Route path="/" element={<Home />} />
           <Route path="/favorite" element={<Favorite favoriteMovies={favoriteMovies} />} />
           <Route path="/later" element={<WatchLater watchLaterMovies={watchLaterMovies} />} />
+          <Route path="/search" element={<Search/>} />
+          <Route path="/movie/:id" element={<MovieDetails/>} />
         </Routes>
       </header>
     </Router>
